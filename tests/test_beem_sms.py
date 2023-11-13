@@ -13,7 +13,7 @@ def test_send_sms_success():
     responses.add(responses.POST, BASE_URL, status=200)
     
     sms_sender = SMSSender(api_key= API_KEY, secret_key=SECRET_KEY, base_url=BASE_URL)
-    message = sms_sender.send_sms(source_addr=SOURCE_ADDR, dest_addr="255742892731", message="Hi, James")
+    message = sms_sender.send_sms(source_addr=SOURCE_ADDR, dest_addr="255742892731", message="Hi, there")
     print("message: ", message)
 
 @responses.activate
